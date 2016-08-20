@@ -28,11 +28,11 @@
 
       <hgroup class="pull-left">
         <h1><a [href]="url">{{ title }}</a></h1>
-        <h3 (click)="plusOne($event)" [ngClass]="{ 'red': num%2==0, 'green': num%2!=0 }">{{ subTitle }} +{{num}}</h3>
+        <h3 (click)="plusOne($event)" [ngClass]="getClass()">{{ subTitle }} +{{num}}</h3>
         <!--<h3 (click)="plusOne($event)" [class]="num % 2 == 0 ? 'red' : 'green'">{{ subTitle }} +{{num}}</h3>-->
       </hgroup>
 
-      <div id="social-icons" class="pull-right social-icon">
+      <div id="social-icons" class="pull-right social-icon" *ngIf="num%2==0">
         <a href="https://www.facebook.com/will.fans" title="Will 保哥的技術交流中心" target="_blank">
           <img src="/assets/images/facebook.png">
         </a>
