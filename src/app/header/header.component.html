@@ -28,7 +28,7 @@
 
       <hgroup class="pull-left">
         <h1><a [href]="url">{{ title }}</a></h1>
-        <h3 (click)="plusOne($event)" [ngClass]="getClass()">{{ subTitle }} +{{num}}</h3>
+        <h3 (click)="plusOne($event)" [ngClass]="getClass()">{{ subTitle }} +{{num | tochinesenumber }}</h3>
         <!--<h3 (click)="plusOne($event)" [class]="num % 2 == 0 ? 'red' : 'green'">{{ subTitle }} +{{num}}</h3>-->
       </hgroup>
 
