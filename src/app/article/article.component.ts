@@ -16,9 +16,9 @@ export class ArticleComponent implements OnInit {
   @Output()
   delete = new EventEmitter<any>();
 
-  DeleteArticle(item) {
-    this.delete.emit(item);
-  }
+  // DeleteArticle(item) {
+  //   this.delete.emit(item);
+  // }
 
   constructor() { }
 
