@@ -15,12 +15,17 @@ export class HeaderComponent implements OnInit {
   plusOne($event: MouseEvent) {
     if ($event.altKey) {
       this.num--;
-    }
-    else {
+    } else {
       this.num++;
     }
   }
 
+  getClass() {
+    return {
+      'red': (this.num % 2) === 0,
+      'green': (this.num % 2) !== 0
+    };
+  }
   ngOnInit() {
   }
 
