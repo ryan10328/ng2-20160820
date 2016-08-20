@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-article',
@@ -8,11 +8,18 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ArticleComponent implements OnInit {
 
   @Input()
-  data: any;
+  item: any;
+
+  @Input()
+  i: number;
+  // 開放一個delete事件用來回傳給AppComponent
+  @Output()
+  delete = new EventEmitter<any>();
+
   DeleteArticle(item) {
-    let index = this.data.indexOf(item);
-    this.data.splice(index, 1);
+    this.delete.emit(item);
   }
+
   constructor() { }
 
   ngOnInit() {

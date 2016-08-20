@@ -72,5 +72,10 @@ export class AppComponent {
     this.keyword = inputText;
   }
 
+  DeleteArticle(item) {
+    let index = this.data.indexOf(item);
+    this.data.splice(index, 1);
+  }
+
 
 }
