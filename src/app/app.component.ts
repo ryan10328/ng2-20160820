@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+  keyword: string = 'Hello, World';
+
+  printKeyword($event: KeyboardEvent) {
+
+    let temp = $event.target as HTMLInputElement;
+    console.log($event);
+    if ($event.keyCode === 13) {
+       this.keyword = temp.value;
+    }
+  }
 }
