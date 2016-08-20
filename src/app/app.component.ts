@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+
+  title = 'The Will Will Web';
 
   keyword: string = 'Hello, World';
 
@@ -70,7 +71,8 @@ export class AppComponent {
     this.keyword = inputText;
   }
 
-  DeleteArticle(index: number) {
+  DeleteArticle(item) {
+    let index = this.data.indexOf(item);
     this.data.splice(index, 1);
   }
 }
