@@ -9,12 +9,10 @@ export class AppComponent {
   title = 'app works!';
   keyword: string = 'Hello, World';
 
-  printKeyword($event: KeyboardEvent) {
+  printKeyword(element) {
 
-    let temp = $event.target as HTMLInputElement;
-    console.log($event);
-    if ($event.keyCode === 13) {
-       this.keyword = temp.value;
-    }
+    let temp = element as HTMLInputElement;
+    this.keyword = temp.value;
+
   }
 }
