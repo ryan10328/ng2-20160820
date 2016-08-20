@@ -9,10 +9,7 @@ export class AppComponent {
   title = 'app works!';
   keyword: string = 'Hello, World';
 
-  printKeyword(element) {
-
-    let temp = element as HTMLInputElement;
-    this.keyword = temp.value;
-
+  printKeyword(inputText: string) {
+    this.keyword = inputText;
   }
 }
