@@ -70,7 +70,7 @@ export class AppComponent {
     this.keyword = inputText;
   }
 
-  DeleteArticle(index) {
+  DeleteArticle(index: number) {
     this.data.splice(index, 1);
   }
 }

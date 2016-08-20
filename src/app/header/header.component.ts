@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
   subTitle: string = '記載著 Will 在網路世界的學習心得與技術分享';
   url: string = 'http://blog.miniasp.com/';
   num: number = 0;
+
   constructor() { }
 
   plusOne($event: MouseEvent) {
@@ -26,6 +27,8 @@ export class HeaderComponent implements OnInit {
       'green': (this.num % 2) !== 0
     };
   }
+
+
   ngOnInit() {
   }
 
