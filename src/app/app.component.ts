@@ -69,4 +69,8 @@ export class AppComponent {
   printKeyword(inputText: string) {
     this.keyword = inputText;
   }
+
+  DeleteArticle(index) {
+    this.data.splice(index, 1);
+  }
 }
